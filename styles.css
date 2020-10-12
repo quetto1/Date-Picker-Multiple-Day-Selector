@@ -1,0 +1,159 @@
+/* Basic styling for the page (not important for the components) */
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			font-family: "Open sans", sans-serif;
+		}
+
+		body {
+			background: #F6F6F6;
+		}
+/* Date picker wrapper styling  */
+		.date-picker {
+			height: 100%;
+			font-family: "Open sans", sans-serif;
+			position: relative;
+			width: 100%;
+			max-width: 320px;
+			height: 100%;
+			max-height: 350px;
+			cursor: pointer;
+			user-select: none;
+		}
+
+		.date-picker .dates {
+			width: 100%;
+			height: 100%;
+			top: 100%;
+			left: 0;
+			right: 0;
+		}
+
+		/* Header Month/Year and Arrows */
+		.date-picker .dates .month-wrapper {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		.date-picker .dates .month-wrapper .mth {
+			font-size: 14px;
+			padding-top: 25px;
+			text-transform: uppercase;
+			font-weight: bold;
+		}
+
+		/* Arrrows (Right & Left) */
+		.arrow-wrapper-right {
+			position: relative;
+			background-color: #FFFFFF;
+			width: 32px;
+			height: 32px;
+			margin-top: 20px;
+			border-radius: 50%;
+			transition: all 0.2s ease;
+		}
+		.arrow-wrapper-left {
+			position: relative;
+			background-color: #FFFFFF;
+			width: 32px;
+			height: 32px;
+			margin-top: 20px;
+			border-radius: 50%;
+			transition: all 0.2s ease;
+		}
+
+		.arrow-right {
+			left: 8px;
+			top: 10px;
+			position: absolute;
+			border-right: 3px solid;
+			border-bottom: 3px solid;
+			height: 11px;
+			width: 11px;
+			transform: rotate(-45deg);
+		}
+
+		.arrow-left {
+			left: 11px;
+			top: 10px;
+			position: absolute;
+			border-right: 3px solid;
+			border-bottom: 3px solid;
+			height: 11px;
+			width: 11px;
+			transform: rotate(135deg);
+		}
+
+		.date-picker .dates .month-wrapper .arrow-wrapper:hover {
+			background-color: black;
+			color: white;
+		}
+
+		/* Weekdays  */
+		.date-picker .dates .weekdays {
+			color: #A3A6B4;
+			font-size: 12px;
+			font-weight: bold;
+			text-transform: uppercase;
+			display: flex;
+			padding-top: 10px;
+			padding-bottom: 10px;
+			justify-content: space-around;
+		}
+
+		.contetn-wrapper {
+			border-top-right-radius: 10px;
+			border-top-left-radius: 10px;
+			margin-top: 20px;
+			width: 100%;
+			max-width: 320px;
+			background-color: #FFFFFF;
+			height: auto;
+			border: 1px solid #E8E9EC;
+			border-collapse: collapse;
+		}
+
+		.date-picker .dates .contetn-wrapper .days {
+			display: grid;
+			grid-template-columns: repeat(7, 1fr);
+			height: auto;
+			font-size: 13px;
+			justify-content: space-around;
+			text-align: center;
+			color: #43425D;
+			border-bottom-right-radius: 3%;
+			border-bottom-left-radius: 3%;
+		}
+
+		.date-picker .dates .contetn-wrapper .days div {
+			border: 1px solid #E8E9EC;
+			padding: 10px;
+			border-collapse: collapse;
+		}
+
+		.date-picker .dates .contetn-wrapper .days div:hover {
+			color: #FFFFFF;
+			background-color: #212121;
+			transition: 0.4s;
+
+		}
+		/* These classes are added when dates are getting populated on the calendar along with highlights etc.  */
+		.pre-date {
+			color: #9EA5A5;
+		}
+
+		.next-date {
+			color: #9EA5A5;
+		}
+
+		.today-day {
+			background-color: pink;
+			color: #FFFFFF;
+
+		}
+
+		.highlight-day {
+			color: #FFFFFF;
+			background-color: #212121;
+		}
